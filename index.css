@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+:root {
+  --bg-primary: #03081e;
+  --bg-card: #0b153c;
+  --text-main: #ffffff;
+  --text-muted: #94a3b8;
+  --accent-gold: #eab308;
+  --cyan-brand: #06b6d4;
+  --blue-brand: #3b82f6;
+  --border-color: #1e293b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: 'Cairo', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+.app-container {
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.app-header {
+  width: 100%;
+  max-width: 750px;
+  background: linear-gradient(135deg, #0b153c, #060d28);
+  padding: 25px;
+  border-radius: 20px;
+  border: 3px double var(--accent-gold);
+  text-align: center;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.main-title {
+  font-size: 1.4rem;
+  color: var(--accent-gold);
+  margin: 0;
+  font-weight: 700;
+}
+
+.lang-btn {
+  background-color: #1e3a8a;
+  color: #fff;
+  border: 1px solid var(--blue-brand);
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.lang-btn:hover {
+  background-color: var(--blue-brand);
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin: 12px 0;
+}
+
+.stars-box {
+  background: rgba(234, 179, 8, 0.08);
+  border: 1px dashed var(--accent-gold);
+  padding: 12px;
+  border-radius: 12px;
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+  transition: transform 0.2s;
+}
+
+.stars-box:hover {
+  transform: scale(1.01);
+}
+
+.stars-display {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.score-badge {
+  background: var(--accent-gold);
+  color: var(--bg-primary);
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.gate-banner {
+  background-color: var(--accent-gold);
+  color: var(--bg-primary);
+  padding: 10px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 12px rgba(234, 179, 8, 0.2);
+}
+
+.main-content {
+  width: 100%;
+  max-width: 750px;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  color: var(--text-main);
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.characters-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 600px) {
+  .characters-grid {
+    flex-direction: row;
+  }
+}
+
+.char-card {
+  flex: 1;
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
+  border-radius: 18px;
+  padding: 25px 20px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.rushd-card { border-color: var(--cyan-brand); }
+.stemo-card { border-color: var(--blue-brand); }
+
+.card-badge {
+  position: absolute;
+  top: 12px;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 12px;
+  color: #fff;
+  font-weight: bold;
+}
+
+[dir="rtl"] .card-badge { left: 12px; }
+[dir="ltr"] .card-badge { right: 12px; }
+
+.rushd-card .card-badge { background-color: var(--cyan-brand); }
+.stemo-card .card-badge { background-color: var(--blue-brand); }
+
+.char-avatar {
+  font-size: 3.8rem;
+  margin: 15px 0 10px 0;
+}
+
+.char-name {
+  color: var(--accent-gold);
+  margin: 5px 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.char-description {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 10px 0 0 0;
+}
+
+.experiment-section {
+  margin-top: 35px;
+  background: rgba(11, 21, 60, 0.6);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 25px;
+  text-align: center;
+}
+
+.experiment-heading {
+  color: var(--accent-gold);
+  margin: 0 0 10px 0;
+  font-size: 1.15rem;
+}
+
+.experiment-text {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0 0 20px 0;
+}
+
+.action-btn {
+  background: linear-gradient(135deg, #eab308, #ca8a04);
+  color: var(--bg-primary);
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: inherit;
+  box-shadow: 0 4px 15px rgba(234, 179, 8, 0.3);
+  transition: transform 0.2s;
+}
+
+.action-btn:hover {
+  transform: translateY(-2px);
+}
